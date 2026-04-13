@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "music-production-ai-mcp"
+version = "1.0.0"
+description = "Audio and music tools - chord progressions, tempo detection, key finding, lyric analysis, mixing recommendations"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "MEOK AI Labs", email = "hello@meok.ai" },
+]
+keywords = ["mcp", "ai", "tools", "music"]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+music-production-ai-mcp = "server:mcp.run"
