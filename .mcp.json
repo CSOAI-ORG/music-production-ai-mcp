@@ -1,0 +1,24 @@
+{
+  "name": "music-production-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Audio and music tools powered by MEOK AI Labs.",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/music-production-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "generate_chord_progression",
+    "detect_tempo",
+    "find_key",
+    "analyze_lyrics",
+    "mixing_recommendations"
+  ],
+  "categories": [
+    "Music",
+    "Creative"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

@@ -1,0 +1,10 @@
+name: music-production-ai-mcp
+description: "MEOK AI Labs — Audio and music tools powered by MEOK AI Labs."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/music-production-ai-mcp
+license: MIT
+categories: [Music, Creative]
+tags: [music-production, audio, midi, sound-design, music-theory, daw]
+runtime: python
+entrypoint: server.py
