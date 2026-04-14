@@ -1,24 +1,113 @@
 {
   "name": "music-production-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Audio and music tools powered by MEOK AI Labs.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/music-production-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> Audio and music tools - chord progressions, tempo detection, key finding, lyric analysis, mixing recommendations",
+  "version": "1.0.0",
   "tools": [
-    "generate_chord_progression",
-    "detect_tempo",
-    "find_key",
-    "analyze_lyrics",
-    "mixing_recommendations"
-  ],
-  "categories": [
-    "Music",
-    "Creative"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_chord_progression",
+      "description": "Generate a chord progression in a given key and style.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "scale": {
+            "type": "string"
+          },
+          "style": {
+            "type": "string"
+          },
+          "bars": {
+            "type": "integer"
+          },
+          "include_voicings": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "detect_tempo",
+      "description": "Detect tempo (BPM) from beat timestamps.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "beat_timestamps": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "beat_timestamps"
+        ]
+      }
+    },
+    {
+      "name": "find_key",
+      "description": "Detect the musical key from a set of notes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prioritize_major": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "notes"
+        ]
+      }
+    },
+    {
+      "name": "analyze_lyrics",
+      "description": "Analyze song lyrics for structure, rhyme scheme, syllable count, and themes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "lyrics": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lyrics"
+        ]
+      }
+    },
+    {
+      "name": "mixing_recommendations",
+      "description": "Get mixing and mastering recommendations for a multitrack session.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "genre": {
+            "type": "string"
+          },
+          "master_loudness_lufs": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "tracks"
+        ]
+      }
+    }
+  ]
 }

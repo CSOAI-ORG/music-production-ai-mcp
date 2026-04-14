@@ -3,6 +3,11 @@ Music Production AI MCP Server
 Audio and music tools powered by MEOK AI Labs.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 import re
 from collections import defaultdict
@@ -84,7 +89,7 @@ def generate_chord_progression(
     scale: str = "major",
     style: str = "pop",
     bars: int = 4,
-    include_voicings: bool = True) -> dict:
+    include_voicings: bool = True, api_key: str = "") -> dict:
     """Generate a chord progression in a given key and style.
 
     Args:
@@ -94,6 +99,10 @@ def generate_chord_progression(
         bars: Number of bars (repeats the progression to fill)
         include_voicings: Include note spellings for each chord
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("generate_chord_progression")
 
     root = _normalize_note(key)
@@ -139,12 +148,16 @@ def generate_chord_progression(
 
 @mcp.tool()
 def detect_tempo(
-    beat_timestamps: list[float]) -> dict:
+    beat_timestamps: list[float], api_key: str = "") -> dict:
     """Detect tempo (BPM) from beat timestamps.
 
     Args:
         beat_timestamps: List of beat occurrence times in seconds (must have at least 4 beats)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("detect_tempo")
 
     if len(beat_timestamps) < 4:
@@ -199,13 +212,17 @@ def detect_tempo(
 @mcp.tool()
 def find_key(
     notes: list[str],
-    prioritize_major: bool = True) -> dict:
+    prioritize_major: bool = True, api_key: str = "") -> dict:
     """Detect the musical key from a set of notes.
 
     Args:
         notes: List of note names found in the piece (e.g. ["C", "E", "G", "A", "D"])
         prioritize_major: Prefer major keys when scores are tied
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("find_key")
 
     normalized = [_normalize_note(n) for n in notes]
@@ -248,13 +265,17 @@ def find_key(
 @mcp.tool()
 def analyze_lyrics(
     lyrics: str,
-    title: str = "") -> dict:
+    title: str = "", api_key: str = "") -> dict:
     """Analyze song lyrics for structure, rhyme scheme, syllable count, and themes.
 
     Args:
         lyrics: Full song lyrics text
         title: Song title (optional)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("analyze_lyrics")
 
     lines = [l.strip() for l in lyrics.strip().split("\n") if l.strip()]
@@ -342,7 +363,7 @@ def analyze_lyrics(
 def mixing_recommendations(
     tracks: list[dict],
     genre: str = "pop",
-    master_loudness_lufs: float = -14.0) -> dict:
+    master_loudness_lufs: float = -14.0, api_key: str = "") -> dict:
     """Get mixing and mastering recommendations for a multitrack session.
 
     Args:
@@ -350,6 +371,10 @@ def mixing_recommendations(
         genre: Genre: pop, rock, hip_hop, electronic, jazz, classical, rnb
         master_loudness_lufs: Target loudness in LUFS (Spotify: -14, Apple: -16, YouTube: -14)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("mixing_recommendations")
 
     # Genre-specific level guides (relative to master, in dB)

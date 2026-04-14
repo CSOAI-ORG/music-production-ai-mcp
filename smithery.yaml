@@ -1,10 +1,60 @@
 name: music-production-ai-mcp
-description: "MEOK AI Labs — Audio and music tools powered by MEOK AI Labs."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/music-production-ai-mcp
-license: MIT
-categories: [Music, Creative]
-tags: [music-production, audio, midi, sound-design, music-theory, daw]
-runtime: python
-entrypoint: server.py
+description: '> Audio and music tools - chord progressions, tempo detection, key finding,
+  lyric analysis, mixing recommendations'
+version: 1.0.0
+tools:
+- name: generate_chord_progression
+  description: Generate a chord progression in a given key and style.
+  parameters:
+  - name: key
+    type: string
+    required: false
+  - name: scale
+    type: string
+    required: false
+  - name: style
+    type: string
+    required: false
+  - name: bars
+    type: integer
+    required: false
+  - name: include_voicings
+    type: boolean
+    required: false
+- name: detect_tempo
+  description: Detect tempo (BPM) from beat timestamps.
+  parameters:
+  - name: beat_timestamps
+    type: array
+    required: true
+- name: find_key
+  description: Detect the musical key from a set of notes.
+  parameters:
+  - name: notes
+    type: array
+    required: true
+  - name: prioritize_major
+    type: boolean
+    required: false
+- name: analyze_lyrics
+  description: Analyze song lyrics for structure, rhyme scheme, syllable count, and
+    themes.
+  parameters:
+  - name: lyrics
+    type: string
+    required: true
+  - name: title
+    type: string
+    required: false
+- name: mixing_recommendations
+  description: Get mixing and mastering recommendations for a multitrack session.
+  parameters:
+  - name: tracks
+    type: array
+    required: true
+  - name: genre
+    type: string
+    required: false
+  - name: master_loudness_lufs
+    type: number
+    required: false
