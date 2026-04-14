@@ -1,29 +1,16 @@
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
 [project]
 name = "music-production-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — Audio and music tools powered by MEOK AI Labs."
-authors = [{name="MEOK AI Labs", email="nicholas@meok.ai"}]
-readme = "README.md"
-license = {text = "MIT"}
+description = "MEOK AI Labs — music-production-ai-mcp"
+license = {file = "LICENSE"}
 requires-python = ">=3.10"
-keywords = ["mcp", "mcp-server", "model-context-protocol", "claude", "ai-tools", "meok-ai-labs", "music-production", "audio", "midi", "sound-design", "music-theory", "daw"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Intended Audience :: Developers",
-]
-dependencies = [
-    "mcp>=1.0.0",
-]
-
+authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
+dependencies = ["mcp>=1.0.0"]
 [project.urls]
 Homepage = "https://meok.ai"
-Repository = "https://github.com/CSOAI-ORG/music-production-ai-mcp"
-Documentation = "https://meok.ai/docs/music-production-ai-mcp"
-"Bug Tracker" = "https://github.com/CSOAI-ORG/music-production-ai-mcp/issues"
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["server.py"]
