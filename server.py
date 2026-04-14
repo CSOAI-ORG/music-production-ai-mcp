@@ -84,8 +84,7 @@ def generate_chord_progression(
     scale: str = "major",
     style: str = "pop",
     bars: int = 4,
-    include_voicings: bool = True,
-) -> dict:
+    include_voicings: bool = True) -> dict:
     """Generate a chord progression in a given key and style.
 
     Args:
@@ -140,8 +139,7 @@ def generate_chord_progression(
 
 @mcp.tool()
 def detect_tempo(
-    beat_timestamps: list[float],
-) -> dict:
+    beat_timestamps: list[float]) -> dict:
     """Detect tempo (BPM) from beat timestamps.
 
     Args:
@@ -201,8 +199,7 @@ def detect_tempo(
 @mcp.tool()
 def find_key(
     notes: list[str],
-    prioritize_major: bool = True,
-) -> dict:
+    prioritize_major: bool = True) -> dict:
     """Detect the musical key from a set of notes.
 
     Args:
@@ -251,8 +248,7 @@ def find_key(
 @mcp.tool()
 def analyze_lyrics(
     lyrics: str,
-    title: str = "",
-) -> dict:
+    title: str = "") -> dict:
     """Analyze song lyrics for structure, rhyme scheme, syllable count, and themes.
 
     Args:
@@ -346,8 +342,7 @@ def analyze_lyrics(
 def mixing_recommendations(
     tracks: list[dict],
     genre: str = "pop",
-    master_loudness_lufs: float = -14.0,
-) -> dict:
+    master_loudness_lufs: float = -14.0) -> dict:
     """Get mixing and mastering recommendations for a multitrack session.
 
     Args:
