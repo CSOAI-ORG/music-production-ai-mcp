@@ -1,6 +1,6 @@
 {
   "name": "music-production-ai-mcp",
-  "description": "> Audio and music tools - chord progressions, tempo detection, key finding, lyric analysis, mixing recommendations",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": [
     {
@@ -35,10 +35,7 @@
         "type": "object",
         "properties": {
           "beat_timestamps": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
+            "type": "number"
           }
         },
         "required": [
@@ -53,10 +50,7 @@
         "type": "object",
         "properties": {
           "notes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "prioritize_major": {
             "type": "boolean"
@@ -92,10 +86,7 @@
         "type": "object",
         "properties": {
           "tracks": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "genre": {
             "type": "string"

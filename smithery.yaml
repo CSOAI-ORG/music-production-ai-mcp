@@ -1,6 +1,5 @@
 name: music-production-ai-mcp
-description: '> Audio and music tools - chord progressions, tempo detection, key finding,
-  lyric analysis, mixing recommendations'
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: generate_chord_progression
@@ -25,7 +24,7 @@ tools:
   description: Detect tempo (BPM) from beat timestamps.
   parameters:
   - name: beat_timestamps
-    type: array
+    type: number
     required: true
 - name: find_key
   description: Detect the musical key from a set of notes.
