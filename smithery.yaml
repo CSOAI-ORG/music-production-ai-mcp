@@ -1,5 +1,6 @@
 name: music-production-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Music Production Ai automation via MCP. Includes generate chord progression,
+  detect tempo, find key. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: generate_chord_progression

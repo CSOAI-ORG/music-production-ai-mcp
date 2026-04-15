@@ -1,6 +1,6 @@
 {
   "name": "music-production-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "Music Production Ai automation via MCP. Includes generate chord progression, detect tempo, find key. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

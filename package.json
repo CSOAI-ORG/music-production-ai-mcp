@@ -1,7 +1,7 @@
 {
   "name": "music-production-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — music production MCP Server",
+  "description": "Music Production Ai automation via MCP. Includes generate chord progression, detect tempo, find key. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "music production",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/music-production-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/music-production-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/music-production-ai-mcp"
+  }
 }
