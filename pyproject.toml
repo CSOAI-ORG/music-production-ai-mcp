@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/music-production-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+music_production_ai_mcp = "server:main"

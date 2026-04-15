@@ -1,0 +1,10 @@
+{
+  "name": "music-production-ai-mcp",
+  "description": "MEOK AI Labs \u2014 music-production-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/music-production-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
