@@ -1,0 +1,57 @@
+{
+  "name": "music-production-ai",
+  "description": "Music Production Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/music-production-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_chord_progression",
+      "description": "Generate a chord progression in a given key and style."
+    },
+    {
+      "name": "detect_tempo",
+      "description": "Detect tempo (BPM) from beat timestamps."
+    },
+    {
+      "name": "find_key",
+      "description": "Detect the musical key from a set of notes."
+    },
+    {
+      "name": "analyze_lyrics",
+      "description": "Analyze song lyrics for structure, rhyme scheme, syllable count, and themes."
+    },
+    {
+      "name": "mixing_recommendations",
+      "description": "Get mixing and mastering recommendations for a multitrack session."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Content & Media"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
