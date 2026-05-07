@@ -1,3 +1,5 @@
+[![music-production-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/music-production-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/music-production-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/music-production-ai-mcp)](https://github.com/CSOAI-ORG/music-production-ai-mcp/stargazers)
