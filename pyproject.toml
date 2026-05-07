@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "music-production-ai-mcp"
-version = "1.0.3"
+version = "1.0.4"
 readme = "README.md"
 description = "Music Production Ai automation via MCP. Includes generate chord progression, detect tempo, find key. By MEOK AI Labs."
 license = {file = "LICENSE"}
