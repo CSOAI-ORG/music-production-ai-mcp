@@ -1,0 +1,9 @@
+# music-production-ai-mcp - Auto-trigger Rules
+
+When the user asks about music production, use music-production-ai-mcp tools: generate_chord_progression, detect_tempo, find_key, analyze_lyrics, mixing_recommendations
+
+**Music Production AI MCP Server**
+
+Install: `pip install music-production-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

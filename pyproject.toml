@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "music-production-ai-mcp"
-version = "1.0.4"
+version = "1.0.6"
 readme = "README.md"
 description = "Music Production Ai automation via MCP. Includes generate chord progression, detect tempo, find key. By MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/music-production-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 music_production_ai_mcp = "server:main"

@@ -1,0 +1,28 @@
+{
+  "name": "music-production-ai-mcp",
+  "title": "Music Production Ai Mcp",
+  "description": "Music Production Ai automation via MCP. Includes generate chord progression, detect tempo, find key. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_chord_progression"
+    },
+    {
+      "name": "detect_tempo"
+    },
+    {
+      "name": "find_key"
+    },
+    {
+      "name": "analyze_lyrics"
+    },
+    {
+      "name": "mixing_recommendations"
+    }
+  ]
+}
