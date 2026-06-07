@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "music-production-ai-mcp",
+    "description": "Music Production Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "music-production-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_chord_progression",
+      "detect_tempo",
+      "find_key",
+      "analyze_lyrics",
+      "mixing_recommendations"
+    ]
+  }
+}

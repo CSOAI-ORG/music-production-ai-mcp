@@ -1,0 +1,68 @@
+{
+  "name": "music-production-ai-mcp",
+  "description": "Music Production Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/music-production-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_chord_progression",
+      "name": "Generate Chord Progression",
+      "description": "generate_chord_progression via music-production-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "detect_tempo",
+      "name": "Detect Tempo",
+      "description": "detect_tempo via music-production-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "find_key",
+      "name": "Find Key",
+      "description": "find_key via music-production-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_lyrics",
+      "name": "Analyze Lyrics",
+      "description": "analyze_lyrics via music-production-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "mixing_recommendations",
+      "name": "Mixing Recommendations",
+      "description": "mixing_recommendations via music-production-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
