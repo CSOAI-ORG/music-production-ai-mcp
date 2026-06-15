@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      attestations: write
       id-token: write
     steps:
       - name: Checkout repository
@@ -32,9 +31,3 @@ jobs:
         run: |
           npx @smithery/cli mcp publish "https://github.com/${{ github.repository }}" -n nicholastempleman/${{ github.event.repository.name }} --json
 
-      - name: Attest build provenance
-        uses: actions/attest-build-provenance@v2
-        with:
-          subject-name: ${{ github.repository }}
-          subject-digest: sha256:${{ github.sha }}
-          push-to-registry: false
