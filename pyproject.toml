@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "music-production-ai-mcp"
-version = "1.0.7"
+version = "1.0.8"
 readme = "README.md"
 description = "Music Production Ai automation via MCP. Includes generate chord progression, detect tempo, find key. By MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -26,3 +26,22 @@ only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 music_production_ai_mcp = "server:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N"]
+ignore = ["E501"]
+
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_Configs = true
+disallow_untyped_defs = true
+

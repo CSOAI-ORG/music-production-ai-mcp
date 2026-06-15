@@ -57,3 +57,12 @@ def meok_attest(result) -> str:
     key = os.environ.get("MEOK_ATTEST_KEY", "meok-public").encode()
     payload = _json.dumps(result, sort_keys=True, default=str).encode()
     return _hmac.new(key, payload, _hashlib.sha256).hexdigest()
+
+
+from enum import Enum
+
+class Tier(str, Enum):
+    FREE = "free"
+    STARTER = "starter"
+    PROFESSIONAL = "professional"
+    ENTERPRISE = "enterprise"
