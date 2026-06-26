@@ -1,4 +1,6 @@
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Music Production AI MCP Server
 Audio and music tools powered by MEOK AI Labs.
 """
