@@ -7,13 +7,13 @@ isn't configured, calls are allowed (never breaks the MCP). Keeps the existing
 check_access(api_key) -> (allowed, message, tier) signature so packages need no code change.
 
 Free tier: server-enforced 200/day (anon less). Pro/PAYG/CSOAI keys: unlimited.
-Get a free key: https://proofof.ai/get-key.html   Upgrade: https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t
+Get a free key: https://proofof.ai/get-key.html   Upgrade: https://meok.ai/pricing
 """
 from __future__ import annotations
 import json, os, urllib.request, urllib.error
 
 _VERIFY_URL = os.environ.get("MEOK_VERIFY_URL", "https://proofof.ai/verify")
-_PRO = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
+_PRO = "https://meok.ai/pricing"
 _TIMEOUT = float(os.environ.get("MEOK_VERIFY_TIMEOUT", "2.5"))
 
 
